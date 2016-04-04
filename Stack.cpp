@@ -3,7 +3,11 @@
 #include <string>
 #include <iomanip> // для setw
 #include "stdio.h"
-
+/** 
+@mainpage программа, реализующая Стек
+@brief template class Stack
+@detailed шаблонный класс, реализующий стек с помощью  указателей 
+*/
 
 template <typename T>
 class Stack

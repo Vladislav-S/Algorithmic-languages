@@ -1,7 +1,11 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+/** 
+@mainpage первая моя программа по лабораторной работе, реализует список
+@brief class List
+@detailed класс, реализующий список с помощью  указателей 
+*/
 class list
 {
 	list* Next;

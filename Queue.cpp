@@ -5,6 +5,11 @@ using namespace std;
 
 #define SIZE 100
 #define PRINT(A) cout << endl << #A << endl; 
+/** 
+@mainpage программа, реализующая очередь
+@brief class queue
+@detailed класс, реализующий очередь с помощью  массива
+*/
 
 class queue {
 	int q[SIZE];
