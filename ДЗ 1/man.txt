@@ -1,0 +1,24 @@
+This is the Vlad's homework
+this programm simulates elections
+
+commands and syntax:
+exit //exit from program
+mkreg [name] //create region
+listp //show regions
+listc //show candidates
+list [name] //show persons in region [name]
+add person [reg] [name] [sname] //add [name] [sname] in region [reg]
+add candidate [name] //add candidate from persons with nama = [name]
+rm person [name] //remove person [name]
+rm region [name] //remove region [name]
+rm candidate [name] //remove candidate [name]
+merge [number1]>[number2] //merge two regions, [number1] will be in [number2]
+start //start elections
+stop //stop elections
+vote [person_name] [candidate] //[person_name] will vote for [candidate]
+stats //show statistics
+load [filename.txt] //load data from file
+save [filename.txt] //save data to file
+ca // "clear all" - clear all data
+man //manual
+-end

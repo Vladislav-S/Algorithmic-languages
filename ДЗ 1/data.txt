@@ -1,0 +1,13 @@
+region1
+Tomas Moran
+Daniel Rodkclif
+Samuel Dchscon
+Lola Lita
+--eofreg
+region2
+Linda Loff
+Camel Camelovich
+Tyta Yta
+--eofreg
+--eofregs
+--end

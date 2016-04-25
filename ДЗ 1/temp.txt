@@ -1,0 +1,17 @@
+reg
+Tomas G
+Mike T
+Line M
+George L
+Kate G
+--eofreg
+reg2
+Linda G
+Lukas T
+Mira M
+Tima L
+Karol G
+Xerox K
+--eofreg
+--eofregs
+--end
