@@ -1,15 +1,17 @@
 #include "Header.h"
 
+// почему бы не поместить их в main?
 vector<Region *> regs;
 bool elections = false;
 vector<Person *> cands;
 
 int main() {
-	string str = "";
+	string str = ""; // по умолчанию строка и так создается пустой
 	vector<string> vect;
 	cout << "---------- Vlado's homework ----------" << endl;
 	cout << "---------- type 'man' for more information ----------" << endl;
 
+	// Предлагаю разбить на функции
 	//----- цикл обработки сообщений
 	while (str != "exit") {
 		cout << ">>>"; getline(cin, str);
@@ -21,13 +23,15 @@ int main() {
 		if (vect.at(0) == "mkreg") {
 			try
 			{
-				if (vect.size() == 1) throw MyException(1);
+				if (vect.size() == 1) throw MyException(1); // что за магические значения?
 				else if (vect.size() > 2) throw MyException(5);
 				else if (FindReg(vect.at(1), regs) != nullptr) throw MyException("region already exists");
 				cout << "success" << endl;
 				regs.push_back(new Region(vect.at(1)));
 
 			}
+			// Предлагаю все тело цикла обернуть в try и не дублировать обработку отдельно
+			// для каждой команды
 			catch (const std::exception& ex)
 			{
 				cout << ex.what() << endl;
@@ -327,6 +331,8 @@ int main() {
 
 		}
 		//----- вызов справки
+		// оверкилл. 
+		// предлагаю скопипастить man сюда и не делать io
 		if (vect.at(0) == "man") {
 			try
 			{
