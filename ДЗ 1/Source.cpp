@@ -8,10 +8,8 @@ Region * FindReg(string str, vector<Region *> &r)
 	return nullptr;
 }
 
-Person * FindPers(string str, vector<Region*>& r) throw(MyException)
+Person * FindPers(string str, vector<Region*>& r)
 {
-	if (str == "") throw MyException("wrong first arg");
-	else if(r.size() == 0) throw MyException("secoind arg is empty");
 	for (int i(0); i < r.size(); i++) {
 		for (int j(0); j < r.at(i)->electorate.size(); j++) {
 			if (str == r.at(i)->electorate.at(j)->getName()) {

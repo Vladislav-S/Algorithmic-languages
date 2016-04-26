@@ -18,13 +18,6 @@ Region::Region(string nname, vector<Person *> p)
 	elections = false;
 }
 
-Region::Region(Region * r)
-{
-	name = r->name;
-	electorate = r->electorate;
-	elections = r->elections;
-}
-
 Region::Region(const Region & r)
 {
 	name = r.name;
