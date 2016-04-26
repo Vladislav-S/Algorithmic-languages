@@ -1,17 +1,15 @@
 #include "Header.h"
 
-// почему бы не поместить их в main?
-vector<Region *> regs;
-bool elections = false;
-vector<Person *> cands;
-
 int main() {
-	string str = ""; // по умолчанию строка и так создается пустой
+	vector<Region *> regs;
+	bool elections = false;
+	vector<Person *> cands;
+	string str; 
 	vector<string> vect;
 	cout << "---------- Vlado's homework ----------" << endl;
 	cout << "---------- type 'man' for more information ----------" << endl;
 
-	// Предлагаю разбить на функции
+	// Предлагаю разбить на функции //не понял, типо под каждое сообщение свою функцию? а смысл, всеравно большинство функций будет уникальным
 	//----- цикл обработки сообщений
 	while (str != "exit") {
 		cout << ">>>"; getline(cin, str);

@@ -8,13 +8,9 @@ Region * FindReg(string str, vector<Region *> &r)
 	return nullptr;
 }
 
-<<<<<<< HEAD
+
 Person * FindPers(string str, vector<Region*>& r)
-=======
-Person * FindPers(string str, vector<Region*>& r) // throw(MyException)
-// error: exception specification in declaration does not match
-//      previous declaration
->>>>>>> origin/master
+
 {
 	for (int i(0); i < r.size(); i++) {
 		for (int j(0); j < r.at(i)->electorate.size(); j++) {
