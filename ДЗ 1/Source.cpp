@@ -8,7 +8,9 @@ Region * FindReg(string str, vector<Region *> &r)
 	return nullptr;
 }
 
-Person * FindPers(string str, vector<Region*>& r) throw(MyException)
+Person * FindPers(string str, vector<Region*>& r) // throw(MyException)
+// error: exception specification in declaration does not match
+//      previous declaration
 {
 	if (str == "") throw MyException("wrong first arg");
 	else if(r.size() == 0) throw MyException("secoind arg is empty");

@@ -17,14 +17,15 @@ Person::Person(string n, string sn)
 	votes = 0;
 }
 
-Person::Person(Person * p)
-{
-	name = p->name;
-	sname = p->sname;
-	voted = p->voted;
-	cand = false;
-	votes = 0;
-}
+// Зачем такой нужен?
+// Person::Person(Person * p)
+// {
+// 	name = p->name;
+// 	sname = p->sname;
+// 	voted = p->voted;
+// 	cand = false;
+// 	votes = 0;
+// }
 
 Person::Person(const Person & p)
 {

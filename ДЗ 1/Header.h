@@ -19,7 +19,8 @@ class Person{ //класс гражданина
 public:
 	Person();
 	Person(string n, string sn);
-	Person(Person *);
+	// Зачем такой нужен?
+	//Person(Person *);
 	Person(const Person&);
 	
 
@@ -41,7 +42,8 @@ public:
 	Region();
 	Region(string name);
 	Region(string name, vector<Person *> p);
-	Region(Region *);
+	// Зачем такой нужен?
+	//Region(Region *);
 	Region(const Region&);
 	~Region();
 	string getName();
@@ -71,7 +73,7 @@ public:
 
 
 Region * FindReg(string, vector<Region *> &r); //функция посика региона
-Person * FindPers(string, vector<Region *> &r) throw(MyException); //функция поиска избирателя
+Person * FindPers(string, vector<Region *> &r); //throw(MyException); //функция поиска избирателя
 Person * FindCand(string, vector<Person *> &v); //функция посика кандидата
 void rmReg(Region * reg, vector<Region *> &v); //ф-я удаления региона
 void rmReg(string name, vector<Region *> &v); //ф-я удаления региона (перегрузка)
