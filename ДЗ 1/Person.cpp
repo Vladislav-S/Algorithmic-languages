@@ -17,6 +17,19 @@ Person::Person(string n, string sn)
 	votes = 0;
 }
 
+<<<<<<< HEAD
+=======
+// Зачем такой нужен?
+// Person::Person(Person * p)
+// {
+// 	name = p->name;
+// 	sname = p->sname;
+// 	voted = p->voted;
+// 	cand = false;
+// 	votes = 0;
+// }
+
+>>>>>>> origin/master
 Person::Person(const Person & p)
 {
 	name = p.name;
