@@ -1,0 +1,63 @@
+#include <iostream>
+#include <thread>
+#include <chrono>
+#include <mutex>
+#include <condition_variable>
+
+
+
+using namespace std;
+
+
+void f1(void);
+void f2(void);
+
+
+bool ready = false;
+mutex mtx;
+condition_variable cv;
+
+
+int main(void) {
+    thread t1(f1);
+    thread t2(f2);
+    
+    t1.join();
+    t2.join();
+    cout << endl;
+    return 0;
+}
+
+
+void f2(void) {
+    unique_lock<mutex> lk(mtx);
+    
+    for (int i = 0; i < 50; i++) {
+        this_thread::sleep_for(chrono::milliseconds(10));
+        cout << "bbbbb";
+    }
+    ready = true;
+    lk.unlock();
+    cv.notify_one();
+    
+    for (int i = 0; i < 50; i++) {
+        this_thread::sleep_for(chrono::milliseconds(10));
+        cout << "bbbbb";
+    }
+    
+    return;
+}
+
+
+void f1(void) {
+    unique_lock<mutex> lk(mtx);
+    cv.wait(lk, [](){ return ready;});
+   
+    
+    for (int i = 0; i < 100; i++) {
+        this_thread::sleep_for(chrono::milliseconds(10));
+        cout << "aaaaa";
+    }
+    
+    return;
+}
